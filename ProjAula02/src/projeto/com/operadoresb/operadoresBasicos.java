@@ -6,7 +6,7 @@ public class operadoresBasicos {
 
 	public static double mainOperador(double valor1, double valor2, String opera) {
 
-		System.out.println("C?lculo..." + valor1 + " " + opera + " " + valor2);
+		System.out.println("Cálculo..." + valor1 + " " + opera + " " + valor2);
 
 		char[] opConvert = opera.toCharArray();
 
@@ -25,7 +25,7 @@ public class operadoresBasicos {
 		else if (opConvert[0] == '/') {
 
 			if (valor2 == 0) {
-				System.out.println("Valor n?o divis?vel por zero.");
+				System.out.println("Valor não divisível por zero.");
 				return 0.0;
 			}
 
@@ -36,9 +36,9 @@ public class operadoresBasicos {
 		else if (opConvert[0] == '%') {
 
 			if (valor1 % valor2 == 0.0)
-				System.out.println("Este mod traduz em n?mero par.");
+				System.out.println("Este mod traduz em número par.");
 			else
-				System.out.println("Este mod traduz em n?mero impar.");
+				System.out.println("Este mod traduz em número impar.");
 
 			return valor1 % valor2;
 
@@ -46,6 +46,8 @@ public class operadoresBasicos {
 
 		return -0.00;
 	}
+	
+	public static void main(String[] args) {
 
 		// Aqui eremos utilizar todos operadores basicos no JAVA
 
@@ -54,10 +56,11 @@ public class operadoresBasicos {
 		String operando = "";
 		double monitor = 1;
 
+		Scanner in4 = new Scanner(System.in);
 		Scanner in1 = new Scanner(System.in);
 		Scanner in2 = new Scanner(System.in);
 		Scanner in3 = new Scanner(System.in);
-		Scanner in4 = new Scanner(System.in);
+		
 
 		do {
 			System.out.println("Digite valor1: ");
@@ -72,17 +75,17 @@ public class operadoresBasicos {
 			System.out.println(mainOperador(valor1, valor2, operando));
 
 			/*
-			 * System.out.println("Este ? a soma de dois n?meros: "+
+			 * System.out.println("Este é a soma de dois números: "+
 			 * mainOperador(1.2,2.4,"+"));
-			 * System.out.println("Este ? a subtra??o de dois n?meros: "+
+			 * System.out.println("Este é a subtração de dois números: "+
 			 * mainOperador(1.2,2.4,"-"));
-			 * System.out.println("Este ? a nultiplica??o de dois n?meros: "+
+			 * System.out.println("Este ? a nultiplição de dois números: "+
 			 * mainOperador(1.2,2.4,"*"));
-			 * System.out.println("Este ? a divis?o de dois n?meros:" +
+			 * System.out.println("Este ? a divisão de dois números:" +
 			 * mainOperador(8.0,0.0,"/"));
-			 * System.out.println("Este ? a divis?o de dois n?meros:" +
+			 * System.out.println("Este ? a divisão de dois números:" +
 			 * mainOperador(16.0,8.0,"/"));
-			 * System.out.println("Este ? um mod % entre dois n?meros:"+
+			 * System.out.println("Este ? um mod % entre dois números:"+
 			 * mainOperador(34.0,2.0,"%"));
 			 */
 
@@ -90,7 +93,6 @@ public class operadoresBasicos {
 			monitor = Double.valueOf(in4.nextLine());
 
 		} while (monitor != 0);
-
-	}
-
+		
+}
 }

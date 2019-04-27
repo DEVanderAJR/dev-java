@@ -5,7 +5,7 @@ public class HelloAndroid {
 	 // primeira estrtutura a ser executada 
 	public static void main(String[] args) {
 		
-		//TIPOS DE VARI?VES
+		//TIPOS DE VARIéVES
 		
 		byte    varTipoByte = 10;
 		int     varTipoInt  = 10000;
@@ -15,14 +15,14 @@ public class HelloAndroid {
 		boolean varTipoBool  = true;
 		
 		
-		System.out.println("Primeiro c?digo em Java");
-		System.out.println("Tipos de vari?veis");
-		System.out.println("byte: "  + varTipoByte   + "? capaz de armazenar valores entre -128 at? 127");
-		System.out.println("int: "   + varTipoInt    + "? capaz de armazenar valores entre ?2147483648 at? 2147483647.");
-		System.out.println("long: "  + varTipoLong   + "? capaz de armazenar valores entre ?9223372036854775808 at? 9223372036854775807.");
-		System.out.println("float: " + varTipoFloat  + "? capaz de armazenar valores entre 3.4e?038 at? 3.4e+038");
-		System.out.println("double " + varTipoDouble + "? capaz de armazenar valores entre 1 .7e?308 at? 1.7e+308");
-		System.out.println("boolean:"+ varTipoBool   + "? capaz de armazenar valores true ou false");
+		System.out.println("Primeiro código em Java");
+		System.out.println("Tipos de variáveis");
+		System.out.println("byte: "  + varTipoByte   + "é capaz de armazenar valores entre -128 até 127");
+		System.out.println("int: "   + varTipoInt    + "é capaz de armazenar valores entre é2147483648 até 2147483647.");
+		System.out.println("long: "  + varTipoLong   + "é capaz de armazenar valores entre é9223372036854775808 até 9223372036854775807.");
+		System.out.println("float: " + varTipoFloat  + "é capaz de armazenar valores entre 3.4eé038 até 3.4e+038");
+		System.out.println("double " + varTipoDouble + "é capaz de armazenar valores entre 1 .7eé308 até 1.7e+308");
+		System.out.println("boolean:"+ varTipoBool   + "é capaz de armazenar valores true ou false.");
 		
 		
 		
