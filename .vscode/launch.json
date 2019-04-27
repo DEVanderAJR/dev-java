@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - operadoresBasicos",
+            "request": "launch",
+            "mainClass": "projeto.com.operadoresb.operadoresBasicos",
+            "projectName": "ProjAula02"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - CriaLoops",
+            "request": "launch",
+            "mainClass": "projeto.com.loops.CriaLoops",
+            "projectName": "ProjAula04"
+        }
+    ]
+}
