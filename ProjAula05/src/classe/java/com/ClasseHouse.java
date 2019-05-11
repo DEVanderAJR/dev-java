@@ -41,29 +41,25 @@ public void ConsultaMoney() {
 	
 	public void OutMoney(double y) {		
 		
-		while((this.Saldo <= y) && this.ControlEmprestimo <= this.LimiteEmprestimo) {
-			
-			this.SolicitaEmprestimo(100, 1);	
-			this.MoneyTerc = true;
-			this.EmpAtivo = this.MoneyTerc;			
-						
-		}	
 		
-		if(this.Saldo >= y) {
+		/*if(this.Saldo <= this.LimiteEmprestimo || this.ControlEmprestimo <= this.LimiteEmprestimo) { */
 			this.Saldo -= y;
 			System.out.println("- R$"+ y);
-		}
-		else System.out.println("Sem recursos no momento, solicite um emprestimo. Opção 11.");
+		//}
+	//	else System.out.println("Sem recursos no momento, solicite um emprestimo. Opção 11.");
 		
 	}
 	
 	public void SolicitaEmprestimo(double y, int x) {
 		
+		
 	switch(x) {
 		case 1: //Solicita;			
-			if(this.ControlEmprestimo <= this.LimiteEmprestimo) {	
+			if(y <= this.LimiteEmprestimo && y > 0.0) {	
 					this.InMoney(y);
 					this.ControlEmprestimo += y;
+					this.MoneyTerc = true;
+					this.EmpAtivo = this.MoneyTerc;
 			}
 			else {
 				
@@ -84,15 +80,17 @@ public void ConsultaMoney() {
 			else if((this.ControlEmprestimo -y) < 0) {		
 						
 				this.OutMoney(this.ControlEmprestimo);//quita emprestimo
-				
-				if( this.ControlEmprestimo > 0.0) {
-					System.out.println("Devolução de excedentes: R$"+ (y - this.ControlEmprestimo));
-					this.InMoney(y - this.ControlEmprestimo);//estorna valor excedente;
-				}
+				System.out.println("Valor de Amortização superior ao Crédito ativo.\n Será debitado7 apenas o valor devido.R$"+ (this.ControlEmprestimo));
+			//	if( this.ControlEmprestimo > 0.0) {
+				//	System.out.println("Devolução de excedentes: R$"+ (y - this.ControlEmprestimo));
+				//	this.InMoney(y - this.ControlEmprestimo);//estorna valor excedente;
+			//	}
 				
 				this.ControlEmprestimo = 0.0;
-				this.MoneyTerc = false;
-				this.EmpAtivo = this.MoneyTerc;
+				if(this.ControlEmprestimo == 0) {
+					this.MoneyTerc = false;
+					this.EmpAtivo = this.MoneyTerc;
+				}
 				
 				System.out.println("Situação de Empréstimo atual: R$"+ this.ControlEmprestimo +"\n");
 				
@@ -105,8 +103,10 @@ public void ConsultaMoney() {
 				this.OutMoney(y);//abate emprestimo
 				
 				System.out.println("Situação de Empréstimo atual: R$"+ this.ControlEmprestimo +"\n");
-				this.MoneyTerc = false;
-				this.EmpAtivo = this.MoneyTerc;
+				if(this.ControlEmprestimo == 0) {
+					this.MoneyTerc = false;
+					this.EmpAtivo = this.MoneyTerc;
+				}
 			}
 			break;
 		case 3:

@@ -16,6 +16,7 @@ public class ClasseMain {
 			System.out.println("|||||||||||||||-5- Crédito.");
 			System.out.println("|||||||||||||||-6- Débito.");
 			System.out.println("|||||||||||||||-7- Saldo.");
+			System.out.println("|||||||||||||||-8- Solicitar Emprestimo.");
 			System.out.println("|||||||||||||||-0- Sair:\n");
 		}
 		else {
@@ -28,9 +29,9 @@ public class ClasseMain {
 			System.out.println("|||||||||||||||-7- Saldo.");
 			System.out.println("|||||||||||||||-6- Débitoo.");
 			System.out.println("|||||||||||||||-7- Saldo.");
-			System.out.println("|||||||||||||||-8- Consulta Emprestimo.");
+			System.out.println("|||||||||||||||-8- Solicitar Emprestimo.");
 			System.out.println("|||||||||||||||-9- Quitar Emprestimo.");
-			System.out.println("|||||||||||||||-10- Solicitar Emprestimo.");
+			System.out.println("|||||||||||||||-10- Consultar Emprestimo.");
 			System.out.println("|||||||||||||||-11- Alterar Limite de Crédito.");
 			System.out.println("|||||||||||||||-0- Sair:\n");
 			control++;
@@ -42,6 +43,7 @@ public class ClasseMain {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int exit = 0;
+		int menuEsc =0;
 		Double x = 0.0;
 		
 		System.out.println("Instanciando Sistema House.");	
@@ -52,7 +54,10 @@ public class ClasseMain {
 		//do {
 		while(exit <= 0) {	
 			
-			if (!HouseOne.EmpAtivo) Menu(1);
+			if (!HouseOne.EmpAtivo) { Menu(1);
+			menuEsc =1;
+			control = 0;
+			}
 			else Menu(2);
 			
 			Scanner in1 = new Scanner(System.in);
@@ -118,12 +123,9 @@ public class ClasseMain {
 					HouseOne.ConsultaMoney();
 					break;
 				case "8":
-					
-					if (control > 0) {
-						
-						HouseOne.SolicitaEmprestimo(0.0, 3);
-					}
-					
+						System.out.println("Qual valor deseja solicitar? Limite atual:"+ HouseOne.LimiteEmprestimo);
+						HouseOne.SolicitaEmprestimo(0.0,3);
+						HouseOne.SolicitaEmprestimo(Double.valueOf(in1.nextLine()), 1 );
 					break;
 				case "9":
 					
@@ -140,8 +142,7 @@ public class ClasseMain {
 					
 					if (control > 0) {
 						
-						System.out.println("Digite o Valor da Solicitação:");
-						HouseOne.SolicitaEmprestimo(Double.valueOf(in1.nextLine()), 1 );					
+						HouseOne.SolicitaEmprestimo(0.0,3);				
 						
 					}
 					
