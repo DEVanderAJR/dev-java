@@ -13,16 +13,33 @@ public class ClasseHouse {
 	Double ValueLuz =0.0;
 	Double LimiteEmprestimo = 1000.0;
 	boolean	EmpAtivo = false;
+	private String NumHouse = "";
 	private Boolean Quitado = true;
 	private Double Saldo = 0.0;
 	private boolean MoneyTerc = false;
 	private Double ControlEmprestimo = 0.0; 
 	
+	/*
+	 * CONSTRUTOR
+	 * É INVOCADO QUANDO SE INSTANCIA UMA CLASSE
+	 * Responsável pela inicialização do objeto;
+	 * Deve sempre possuir o mesmo nome da classe;
+	 * Não permite retorno de valor;
+	 * Não obrigatório;
+	 * */
+	
+public ClasseHouse(String CodUser) {
+	
+	this.NumHouse = (CodUser);
+	System.out.println("\nInstanciando Sistema House. Cod:" + this.NumHouse);	
+	System.out.println("|||||||||||||||Bem vindo ao Sistema House - O que deseja fazer? ||||||||||||");
+	
+}
 
 /*
  * Comportamentos e métodos
  * */
-	
+
 public void ConsultaMoney() {			
 	
 		System.out.println("Saldo: R$" + this.Saldo);

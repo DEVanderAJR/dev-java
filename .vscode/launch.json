@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ClasseMain",
+            "request": "launch",
+            "mainClass": "classe.java.com.ClasseMain",
+            "projectName": "ProjAula05"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - operadoresBasicos",
             "request": "launch",
             "mainClass": "projeto.com.operadoresb.operadoresBasicos",

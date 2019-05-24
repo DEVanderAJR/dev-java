@@ -46,10 +46,12 @@ public class ClasseMain {
 		int menuEsc =0;
 		Double x = 0.0;
 		
-		System.out.println("Instanciando Sistema House.");	
-		System.out.println("|||||||||||||||Bem vindo ao Sistema House - O que deseja fazer? ||||||||||||");
 		
-		ClasseHouse HouseOne = new ClasseHouse();
+		System.out.println("|||||||||||||||DIGITE O CODIGO PASS DE SUA HOUSE||||||||||||\n");
+		Scanner in1 = new Scanner(System.in);
+		
+		
+		ClasseHouse HouseOne = new ClasseHouse(in1.nextLine());
 		
 		//do {
 		while(exit <= 0) {	
@@ -60,7 +62,7 @@ public class ClasseMain {
 			}
 			else Menu(2);
 			
-			Scanner in1 = new Scanner(System.in);
+			//Scanner in1 = new Scanner(System.in);
 			
 			
 			switch(in1.nextLine()) {
