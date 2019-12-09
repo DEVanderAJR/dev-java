@@ -1,0 +1,6 @@
+CRIE O ARQUIVO .bat
+e adicione o comando abaixo dentro do mesmo.
+cmd /k java -jar C:\teste\PROJNUTRI2.jar
+Crie uma pasta teste no C:\ do sem computador, adicione o .bat e o arquivo PROJNUTRI2.jar
+execute o .bat .
+O programa Proj Nutri executará.
